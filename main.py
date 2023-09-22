@@ -37,4 +37,5 @@ def none():
 def home():
     return redirect("/"), 301
 
+
 app.run("127.0.0.1", 6942)
