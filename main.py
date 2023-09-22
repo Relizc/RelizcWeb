@@ -16,7 +16,7 @@ def error500(e):
 
 @app.route("/log-in")
 def what():
-    return send_file("templates/log_in.html")
+    return insert("base.login.html")
 
 @app.route("/assets/<assetid>")
 def getasset(assetid):
