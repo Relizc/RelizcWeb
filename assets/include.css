@@ -1,0 +1,109 @@
+@font-face {
+    font-family: varela;
+    src: url("/assets/VarelaRound-Regular.ttf");
+}
+
+body {
+    margin: 0;
+    font-family: varela;
+}
+
+div.body {
+    margin: 16px;
+}
+
+div.topnav {
+    display: flex;
+    width: 100%;
+    padding: 16px;
+
+    background-color: #180000;
+
+    
+
+    gap: 8px;
+
+    color: white;
+
+    justify-content: space-between;
+}
+
+div.topnav .side {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+div.topnav .right {
+
+    display: flex;
+    padding: 0 32px;
+    
+}
+
+div.topnav .left {
+    
+}
+
+a {
+    color: white;
+}
+
+img.logo {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+}
+
+div.topnav span {
+    color: white;
+}
+
+div.search i{
+    padding: 2px;
+    z-index: 2;
+}
+
+div.search {
+    width: 320px;
+    height: 20px;
+    vertical-align: middle;
+    white-space:nowrap;
+    position: relative;
+
+    padding: 8px;
+    border-width: 1px;
+    border-color: #777;
+    border-radius: 8px;
+    border-style: solid;
+
+    white-space: nowrap;
+    overflow: hidden;
+
+    transition: width .5s ease; 
+}
+
+div.canclose {
+    width: 20px;
+}
+
+div.search:hover {
+    width: 320px;
+    transition: width .5s ease;
+}
+
+div.search input {
+    background-color: #180000;
+
+    color: white;
+    border: none;
+
+    outline-width: 0;
+
+    margin-left: 4px;
+
+    font-family: varela;
+    width: 280px;
+    padding-right: 8px;
+}
+
