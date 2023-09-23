@@ -1,11 +1,27 @@
 import flask
-from flask import redirect, render_template, send_file
+from flask import redirect, render_template, send_file, request, jsonify
 import traceback
+import uuid
+import time
 
 app = flask.Flask("bitch")
 
 app.jinja_env.auto_reload = True
 app.config['TEMPLATES_AUTO_RELOAD'] = True
+
+def uuid4():
+    return str(uuid.uuid4()).replace("-", "")
+
+def fail(information, **kwargs):
+    return jsonify({"error": kwargs.get("status", 500),
+    "dump": uuid4(), "ts": int(round(time.time())),
+    "message": information,
+    "code": kwargs.get("code", 0)}), kwargs.get("status", 500)
+
+def standard(message, **kwargs):
+    return jsonify({"message": message, "status": kwargs.get("status", 200),
+    "code": 0}), kwargs.get("status", 200)
+
 
 def insert(webpage):
     d = render_template("template.html", path = webpage + "/index.html", additional_source = webpage + "/header.html")
@@ -36,6 +52,12 @@ def baninfo(banid):
 @app.route("/")
 def none():
     return insert("org.bukkit.fuckme.html"), 200
+
+@app.route("/api/auth")
+def login():
+    usr = request.headers.get("username", None)
+    psw = request.headers.get("password", None)
+    return standard(usr + psw)
 
 @app.route("/home")
 def home():

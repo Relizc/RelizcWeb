@@ -241,4 +241,6 @@ def sha_256(input_string):
                   hex_return(hash_5),
                   hex_return(hash_6),
                   hex_return(hash_7))
-    return(final_hash)
+    return("".join(final_hash))
+
+print(sha_256("test"))
