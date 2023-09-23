@@ -4,8 +4,11 @@ import traceback
 
 app = flask.Flask("bitch")
 
+app.jinja_env.auto_reload = True
+app.config['TEMPLATES_AUTO_RELOAD'] = True
+
 def insert(webpage):
-    d = render_template("template.html", path = webpage)
+    d = render_template("template.html", path = webpage + "/index.html", additional_source = webpage + "/header.html")
     return d
 
 @app.errorhandler(500)
@@ -16,10 +19,11 @@ def error500(e):
 
 @app.route("/log-in")
 def what():
-    return insert("base.login.html")
+    return insert("login")
 
 @app.route("/assets/<assetid>")
 def getasset(assetid):
+    print(assetid)
     try:
         return send_file("assets/" + assetid)
     except:

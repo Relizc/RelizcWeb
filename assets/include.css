@@ -46,7 +46,11 @@ div.topnav .left {
 }
 
 a {
-    color: white;
+
+}
+
+div.topnav a {
+    color: white
 }
 
 img.logo {
@@ -92,6 +96,45 @@ div.search:hover {
     transition: width .5s ease;
 }
 
+input.input {
+    width: 256px;
+    background-color: white;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 8px;
+    height: 24px;
+    padding: 2px 8px;
+    font-family: varela;
+
+    outline: none;
+    transition: box-shadow .2s ease;
+}
+
+input.input:focus {
+    box-shadow: 0 0 0 2px rgb(255, 183, 75);
+    transition: box-shadow .2s ease;
+}
+
+button {
+    background-color: white;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 8px;
+    height: 32px;
+    padding: 0 8px;
+    
+    font-family: varela;
+
+    transition: background-color .3s ease;
+}
+
+button:hover {
+    background-color: #eee;
+    cursor: pointer;
+
+    transition: background-color .3s ease;
+}
+
 div.search input {
     background-color: #180000;
 
@@ -106,4 +149,6 @@ div.search input {
     width: 280px;
     padding-right: 8px;
 }
+
+
 

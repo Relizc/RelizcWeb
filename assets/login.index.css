@@ -1,0 +1,25 @@
+body {
+    background-image: url("/assets/LoginWallpaper.jpg")
+}
+
+p#error {
+    color: red;
+}
+
+div.app { 
+    width: 50%;
+    height: 316px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    background-color: white;
+    border-color: #777;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 8px;
+
+    vertical-align: center;
+
+    text-align: center;
+}
