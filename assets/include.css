@@ -14,8 +14,8 @@ div.body {
 
 div.topnav {
     display: flex;
-    width: 100%;
-    padding: 16px;
+    width: 100vw;
+    padding: 16px 0;
 
     background-color: #180000;
 
@@ -37,12 +37,12 @@ div.topnav .side {
 div.topnav .right {
 
     display: flex;
-    padding: 0 32px;
-    
+
+    padding: 0 32px;    
 }
 
 div.topnav .left {
-    
+    padding: 0 32px;  
 }
 
 a {

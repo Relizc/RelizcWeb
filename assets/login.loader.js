@@ -6,7 +6,12 @@ function done(d) {
     console.log(d)
     c.innerHTML = "Continue"
 
-    g.innerHTML = d.message
+    if (d.status >= 300) {
+        g.innerHTML = d.message
+        return
+    }
+
+    
 }
 
 c.onclick = () => {

@@ -1,5 +1,10 @@
 body {
-    background-image: url("/assets/LoginWallpaper.jpg")
+    background-image: url("/assets/LoginWallpaper.jpg");
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 p#error {
@@ -7,7 +12,7 @@ p#error {
 }
 
 div.app { 
-    width: 50%;
+    width: 512px;
     height: 316px;
     top: 50%;
     left: 50%;
