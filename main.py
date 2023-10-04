@@ -54,7 +54,7 @@ def baninfo(banid):
 
 @app.route("/")
 def none():
-    return insert("org.bukkit.fuckme.html"), 200
+    return insert("org.bukkit.fuckme"), 200
 
 @app.route("/api/auth")
 def login():
@@ -70,7 +70,7 @@ def login():
         if f[usr.lower()]["password"] != psw:
             return fail("Incorrect username or password.", status=401, code=47099)
     except KeyError:
-        return fail("Incorrect username or password.", status=401, code=47029)
+        return fail("Incorrect username or password.", status=401, code=47099)
     
     tok = tt.gen(usr)
 

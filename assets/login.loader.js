@@ -6,10 +6,12 @@ function done(d) {
     console.log(d)
     c.innerHTML = "Continue"
 
-    if (d.status >= 300) {
+    if (d.code == 47099) {
         g.innerHTML = d.message
         return
     }
+
+    window.location.href = "/"
 
     
 }
